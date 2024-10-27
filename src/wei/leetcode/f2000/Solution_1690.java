@@ -1,4 +1,4 @@
-package wei.leetcode.f2000;
+package com.wei.leetcode.f2000;
 
 class Solution_1690 {
 

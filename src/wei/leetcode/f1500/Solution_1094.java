@@ -1,4 +1,4 @@
-package wei.leetcode.f1500;
+package com.wei.leetcode.f1500;
 
 import com.wei.leetcode.Difference;
 

@@ -1,4 +1,4 @@
-package wei.hello.search;
+package com.wei.hello.search;
 
 import java.util.HashMap;
 import java.util.Map;

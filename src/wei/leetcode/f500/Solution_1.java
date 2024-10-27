@@ -1,4 +1,4 @@
-package wei.leetcode.f500;
+package com.wei.leetcode.f500;
 
 import java.util.Arrays;
 import java.util.HashMap;

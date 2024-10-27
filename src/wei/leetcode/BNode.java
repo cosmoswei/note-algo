@@ -1,4 +1,4 @@
-package wei.leetcode;
+package com.wei.leetcode;
 
 public class BNode {
 

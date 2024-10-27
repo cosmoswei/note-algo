@@ -1,4 +1,4 @@
-package wei.leetcode.f1000;
+package com.wei.leetcode.f1000;
 
 class Solution_518 {
     public int change(int amount, int[] coins) {

@@ -1,4 +1,4 @@
-package wei.other;
+package com.wei.other;
 
 import com.wei.leetcode.LeetCodeUtils;
 import com.wei.leetcode.TreeNode;

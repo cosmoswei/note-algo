@@ -1,4 +1,4 @@
-package wei.hello.graph;
+package com.wei.hello.graph;
 
 import java.util.*;
 

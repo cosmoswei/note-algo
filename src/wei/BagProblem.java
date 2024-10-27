@@ -4,10 +4,10 @@ import java.util.Arrays;
 
 public class BagProblem {
     public static void main(String[] args) {
-        int[] weight = {1,3,4};
-        int[] value = {15,20,30};
+        int[] weight = {1, 3, 4};
+        int[] value = {15, 20, 30};
         int bagSize = 4;
-        testWeightBagProblem(weight,value,bagSize);
+        testWeightBagProblem(weight, value, bagSize);
     }
 
     /**
@@ -15,11 +15,12 @@ public class BagProblem {
      * dp[i][j] 表示从下标为[0 - i-1]的物品里任意取，放进容量为j的背包，价值总和最大是多少。
      * 其实是模仿背包重量从 0 开始，背包容量 j 为 0 的话，即dp[i][0]，无论是选取哪些物品，背包价值总和一定为 0。
      * 可选物品也可以从无开始，也就是没有物品可选，即dp[0][j]，这样无论背包容量为多少，背包价值总和一定为 0。
+     *
      * @param weight  物品的重量
      * @param value   物品的价值
      * @param bagSize 背包的容量
      */
-    public static void testWeightBagProblem(int[] weight, int[] value, int bagSize){
+    public static void testWeightBagProblem(int[] weight, int[] value, int bagSize) {
 
         // 创建dp数组
         int goods = weight.length;  // 获取物品的数量
@@ -43,13 +44,13 @@ public class BagProblem {
                      *    2、放物品i
                      * 比较这两种情况下，哪种背包中物品的最大价值最大
                      */
-                    dp[i][j] = Math.max(dp[i - 1][j] , dp[i - 1][j - weight[i - 1]] + value[i - 1]);  // i - 1 对应物品 i
+                    dp[i][j] = Math.max(dp[i - 1][j], dp[i - 1][j - weight[i - 1]] + value[i - 1]);  // i - 1 对应物品 i
                 }
             }
         }
 
         // 打印dp数组
-        for(int[] arr : dp){
+        for (int[] arr : dp) {
             System.out.println(Arrays.toString(arr));
         }
     }

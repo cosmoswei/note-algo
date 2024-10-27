@@ -1,4 +1,4 @@
-package wei.leetcode;
+package com.wei.leetcode;
 
 public class Main {
     public static void main(String[] args) {

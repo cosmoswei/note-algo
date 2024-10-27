@@ -1,4 +1,4 @@
-package wei.hello;
+package com.wei.hello;
 
 /* 开放寻址哈希表 */
 class HashMapOpenAddressing {

@@ -1,4 +1,4 @@
-package wei.leetcode.f500;
+package com.wei.leetcode.f500;
 
 class Solution_136 {
     public int singleNumber(int[] nums) {

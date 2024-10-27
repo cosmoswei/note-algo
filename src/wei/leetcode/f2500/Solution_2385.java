@@ -1,4 +1,4 @@
-package wei.leetcode.f2500;
+package com.wei.leetcode.f2500;
 
 import com.wei.leetcode.TreeNode;
 

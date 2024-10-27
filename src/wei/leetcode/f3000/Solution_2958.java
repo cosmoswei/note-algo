@@ -1,4 +1,4 @@
-package wei.leetcode.f3000;
+package com.wei.leetcode.f3000;
 
 import java.util.HashMap;
 import java.util.Map;

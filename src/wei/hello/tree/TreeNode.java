@@ -1,4 +1,4 @@
-package wei.hello.tree;
+package com.wei.hello.tree;
 
 /* AVL 树节点类 */
 class TreeNode {

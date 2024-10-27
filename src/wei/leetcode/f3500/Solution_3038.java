@@ -1,4 +1,4 @@
-package wei.leetcode.f3500;
+package com.wei.leetcode.f3500;
 
 class Solution_3038 {
 

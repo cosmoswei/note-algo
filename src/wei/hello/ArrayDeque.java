@@ -1,4 +1,4 @@
-package wei.hello;
+package com.wei.hello;
 
 /* 基于环形数组实现的双向队列 */
 class ArrayDeque {

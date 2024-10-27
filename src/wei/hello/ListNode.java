@@ -1,4 +1,4 @@
-package wei.hello;
+package com.wei.hello;
 
 /* 双向链表节点 */
 class ListNode {

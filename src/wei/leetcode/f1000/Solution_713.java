@@ -1,4 +1,4 @@
-package wei.leetcode.f1000;
+package com.wei.leetcode.f1000;
 
 class Solution_713 {
     public static void main(String[] args) {

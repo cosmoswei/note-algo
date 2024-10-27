@@ -1,4 +1,4 @@
-package wei.hello.heap;
+package com.wei.hello.heap;
 
 import java.util.PriorityQueue;
 import java.util.Queue;

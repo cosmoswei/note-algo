@@ -1,4 +1,4 @@
-package wei.leetcode.f3000;
+package com.wei.leetcode.f3000;
 
 class Solution_2575 {
     public int[] divisibilityArray(String word, int m) {

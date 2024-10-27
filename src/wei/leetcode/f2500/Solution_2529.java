@@ -1,4 +1,4 @@
-package wei.leetcode.f2500;
+package com.wei.leetcode.f2500;
 
 class Solution_2529 {
     public int maximumCount(int[] nums) {

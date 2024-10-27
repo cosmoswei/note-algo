@@ -1,4 +1,4 @@
-package wei.leetcode.f1500;
+package com.wei.leetcode.f1500;
 
 class Solution_1052 {
     public int maxSatisfied(int[] customers, int[] grumpy, int minutes) {

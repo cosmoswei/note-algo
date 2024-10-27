@@ -1,4 +1,4 @@
-package wei.leetcode.f3000;
+package com.wei.leetcode.f3000;
 
 class FrequencyTracker_2671 {
     private static final int N = 100001;

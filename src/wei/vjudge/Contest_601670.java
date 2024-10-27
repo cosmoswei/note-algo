@@ -1,4 +1,4 @@
-package wei.vjudge;
+package com.wei.vjudge;
 
 import java.util.Arrays;
 

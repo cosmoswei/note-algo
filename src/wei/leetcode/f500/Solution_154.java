@@ -1,4 +1,4 @@
-package wei.leetcode.f500;
+package com.wei.leetcode.f500;
 
 class Solution_154 {
     public static void main(String[] args) {

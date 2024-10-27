@@ -1,4 +1,4 @@
-package wei.hello.tree;
+package com.wei.hello.tree;
 
 /**
  * 组织和存储大型数据，适用于高频查找、低频增删的场景。

@@ -1,4 +1,4 @@
-package wei.leetcode;
+package com.wei.leetcode;
 
 // 差分数组工具类
 public class Difference {

@@ -1,6 +1,7 @@
-package wei.hello.graph;
+package com.wei.hello.graph;
 
-import hello.PrintUtil;
+
+import com.wei.hello.PrintUtil;
 
 import java.util.ArrayList;
 import java.util.List;

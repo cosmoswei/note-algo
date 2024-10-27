@@ -1,4 +1,4 @@
-package wei.other;
+package com.wei.other;
 
 import java.util.Scanner;
 

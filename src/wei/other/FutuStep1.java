@@ -1,11 +1,6 @@
-package wei.other;
+package com.wei.other;
 
-import com.google.common.collect.Lists;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class FutuStep1 {
 
@@ -38,7 +33,7 @@ public class FutuStep1 {
             int i1 = nums[i] - target;
             Integer index = map.get(i1);
             if (Objects.nonNull(index)) {
-                return Lists.newArrayList(nums[i], nums[index]);
+                return Arrays.asList(nums[i], nums[index]);
             }
         }
         return res;

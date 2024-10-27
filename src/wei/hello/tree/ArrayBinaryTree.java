@@ -1,4 +1,4 @@
-package wei.hello.tree;
+package com.wei.hello.tree;
 
 import java.util.ArrayList;
 import java.util.List;

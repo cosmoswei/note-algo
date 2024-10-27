@@ -1,4 +1,4 @@
-package wei.leetcode.f500;
+package com.wei.leetcode.f500;
 
 class Solution_121_LCR {
     public boolean findTargetIn2DPlants(int[][] plants, int target) {

@@ -1,4 +1,4 @@
-package wei.hello;
+package com.wei.hello;
 
 
 import java.util.ArrayList;
