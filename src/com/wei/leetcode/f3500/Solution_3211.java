@@ -3,7 +3,7 @@ package com.wei.leetcode.f3500;
 import java.util.ArrayList;
 import java.util.List;
 
-class Solution3211 {
+class Solution_3211 {
     public List<String> validStrings(int n) {
         List<String> ans = new ArrayList<>();
         int mask = (1 << n) - 1;
