@@ -3,7 +3,7 @@ package com.wei.leetcode.f3500;
 class Solution_3242 {
     public class NeighborSum {
 
-        private static final int[][] DIRS = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}, {1, 1}, {-1, 1}, {-1, -1}, {1, -1}};
+        private final int[][] DIRS = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}, {1, 1}, {-1, 1}, {-1, -1}, {1, -1}};
 
         private final int[][] s;
 
