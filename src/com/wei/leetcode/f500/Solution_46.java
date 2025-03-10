@@ -9,7 +9,7 @@ public class Solution_46 {
 
     public static void main(String[] args) {
         Solution_46 solution = new Solution_46();
-        int[] int1 = {1, 4, 5};
+        int[] int1 = {1, 4, 5,9};
         IntStream.of(int1)
                 .boxed()
                 .collect(Collectors.toList());

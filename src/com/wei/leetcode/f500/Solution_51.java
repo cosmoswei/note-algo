@@ -8,7 +8,10 @@ public class Solution_51 {
     public static void main(String[] args) {
         Solution_51 solution = new Solution_51();
         List<List<String>> res = solution.solveNQueens(4);
-        res.forEach(System.out::println);
+        System.out.println("res.size() = " + res.size());
+        for (List<String> re : res) {
+            System.out.println(" de " + re);
+        }
     }
 
     List<List<String>> res = new ArrayList<>();
@@ -33,7 +36,6 @@ public class Solution_51 {
     // 结束条件：row 超过 board 的最后一行
     void backtrack(List<String> board, int row) {
         // 触发结束条件
-        System.out.println("row = " + row);
         if (row == board.size()) {
             res.add(new ArrayList<>(board));
             return;
@@ -55,14 +57,12 @@ public class Solution_51 {
             // 撤销选择
             sb.setCharAt(col, '.');
             board.set(row, sb.toString());
-            System.out.println("===========");
         }
     }
 
     /* 是否可以在 board[row][col] 放置皇后？ */
     boolean isValid(List<String> board, int row, int col) {
         int n = board.size();
-
         /* 检查列是否有皇后互相冲突 */
         for (int i = 0; i < n; i++) {
             if (board.get(i).charAt(col) == 'Q') {
@@ -71,7 +71,9 @@ public class Solution_51 {
         }
 
         /* 检查右上方是否有皇后互相冲突 */
-        for (int i = row - 1, j = col + 1; i >= 0 && j < n; i--, j++) {
+        for (int i = row - 1, j = col + 1;
+             i >= 0 && j < n;
+             i--, j++) {
             if (board.get(i).charAt(j) == 'Q') {
                 return false;
             }
@@ -83,7 +85,7 @@ public class Solution_51 {
                 return false;
             }
         }
-
+        System.out.println("row = " + row+" col = "+col);
         return true;
     }
 }
