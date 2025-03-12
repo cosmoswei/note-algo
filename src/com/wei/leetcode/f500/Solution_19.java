@@ -9,7 +9,7 @@ public class Solution_19 {
         Solution_19 solution19 = new Solution_19();
         int[] nums = {1, 2, 3, 4, 5};
         ListNode listNode = LeetCodeUtils.arrayToList(nums);
-        int target = 1;
+        int target = 3;
         ListNode res = solution19.removeNthFromEnd(listNode, target);
         LeetCodeUtils.printList(res);
     }
@@ -40,6 +40,20 @@ public class Solution_19 {
             p1 = p1.next;
         }
         // p2 现在指向第 n - k + 1 个节点，即倒数第 k 个节点
+        return p2;
+    }
+
+    // 返回链表的倒数第 k 个节点
+    ListNode findFromEnd2(ListNode head, int k) {
+        ListNode p1 = head;
+        for (int i = 0; i <k; i++) {
+            p1 = p1.next;
+        }
+        ListNode p2 = head;
+       while (null != p1){
+           p1 = p1.next;
+           p2 = p2.next;
+       }
         return p2;
     }
 }

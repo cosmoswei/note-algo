@@ -6,8 +6,8 @@ import com.wei.leetcode.ListNode;
 public class Solution_21 {
 
     public static void main(String[] args) {
-        int[] nums = new int[]{1, 4};
-        int[] nums2 = new int[]{1, 2, 3};
+        int[] nums = new int[]{1, 2, 4};
+        int[] nums2 = new int[]{1, 3, 4};
         ListNode listNode = LeetCodeUtils.arrayToList(nums);
         ListNode listNode2 = LeetCodeUtils.arrayToList(nums2);
         LeetCodeUtils.printList(mergeTwoLists(listNode, listNode2));
@@ -42,5 +42,28 @@ public class Solution_21 {
         }
         LeetCodeUtils.printList(dummy);
         return dummy.next;
+    }
+
+    static ListNode mergeTwoLists2(ListNode l1, ListNode l2) {
+        ListNode res = new ListNode(-1);
+        ListNode p = res;
+        ListNode p1 = l1, p2 = l2;
+        while (p1 != null && p2 != null) {
+            if (p1.val > p2.val) {
+                p.next = p2;
+                p2 = p2.next;
+            } else {
+                p.next = p1;
+                p1 = p1.next;
+            }
+            p = p.next;
+        }
+        if (p1 != null) {
+            p.next = p1;
+        }
+        if (p2 != null) {
+            p.next = p2;
+        }
+        return res.next;
     }
 }

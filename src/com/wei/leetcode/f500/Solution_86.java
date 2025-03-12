@@ -8,11 +8,10 @@ public class Solution_86 {
     public static void main(String[] args) {
 
         int[] arr = {1, 4, 3, 2, 5, 2};
-        int x = 12;
+        int x = 4;
         ListNode listNode = LeetCodeUtils.arrayToList(arr);
-        LeetCodeUtils.printList(listNode);
-        Solution_86 solution86 = new Solution_86();
-        ListNode partition = solution86.partition(listNode, x);
+        Solution_86 solution = new Solution_86();
+        ListNode partition = solution.partition(listNode, x);
         LeetCodeUtils.printList(partition);
     }
 
@@ -39,7 +38,6 @@ public class Solution_86 {
             p = next;
         }
         p1.next = dummy2.next;
-
         return dummy1.next;
     }
 

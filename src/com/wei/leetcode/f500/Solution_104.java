@@ -1,12 +1,9 @@
 package com.wei.leetcode.f500;
 
 import com.wei.leetcode.LeetCodeUtils;
-import com.wei.leetcode.ListNode;
 import com.wei.leetcode.TreeNode;
 
 public class Solution_104 {
-
-    ListNode successor = null; // 后驱节点
 
     public static void main(String[] args) {
         Solution_104 solution19 = new Solution_104();

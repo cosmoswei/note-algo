@@ -32,7 +32,7 @@ class Solution_142 {
 
     public static void main(String[] args) {
         Solution_142 solution = new Solution_142();
-        int[] nums = {100, 4, 200, 1, 3, 2};
+        int[] nums = {100, 4, 200, 1, 3, 2, 3};
         ListNode listNode = solution.detectCycle(LeetCodeUtils.arrayToList(nums));
         LeetCodeUtils.printList(listNode);
     }
