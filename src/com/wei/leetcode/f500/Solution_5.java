@@ -5,8 +5,9 @@ public class Solution_5 {
 
     public static void main(String[] args) {
         String aba = longestPalindrome("aabxxaxbaa");
-        String aba2 = palindrome("aabxxaxbaa", 5, 5);
         System.out.println("aba = " + aba);
+
+        String aba2 = palindrome("aabxxaxbaa", 5, 5);
         System.out.println("aba2 = " + aba2);
     }
 
