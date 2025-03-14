@@ -6,7 +6,7 @@ class Solution_752 {
     public static void main(String[] args) {
         String[] deadends = {"0201", "0101", "0102", "1212", "2002"};
         String target = "0202";
-        int res = new Solution_752().openLock(deadends, target);
+        int res = new Solution_752().openLock2(deadends, target);
         System.out.println(res);
     }
 
@@ -79,18 +79,64 @@ class Solution_752 {
         return new String(charArray);
     }
 
-    void bfs(String target) {
-        Queue<String> queue = new LinkedList<>();
-        queue.offer("0000");
-        while (!queue.isEmpty()) {
-            int size = queue.size();
-            String cur = queue.poll();
-            for (int i = 0; i < size; i++) {
-                String up = plusOne(cur, i);
-                String down = minusOne(cur, i);
-                queue.offer(up);
-                queue.offer(down);
+    public int openLock2(String[] deadends, String target) {
+        Set<String> deads = new HashSet<>();
+        for (String s : deadends) deads.add(s);
+        // base case
+        if (deads.contains("0000")) return -1;
+        if (target.equals("0000")) return 0;
+
+        // 用集合不用队列，可以快速判断元素是否存在
+        Set<String> q1 = new HashSet<>();
+        Set<String> q2 = new HashSet<>();
+        Set<String> visited = new HashSet<>();
+
+        int step = 0;
+        q1.add("0000");
+        visited.add("0000");
+        q2.add(target);
+        visited.add(target);
+
+        while (!q1.isEmpty() && !q2.isEmpty()) {
+
+            // 在这里增加步数
+            step++;
+
+            // 哈希集合在遍历的过程中不能修改，所以用 newQ1 存储邻居节点
+            Set<String> newQ1 = new HashSet<>();
+
+            // 获取 q1 中的所有节点的邻居
+            for (String cur : q1) {
+                // 将一个节点的未遍历相邻节点加入集合
+                for (String neighbor : getNeighbors(cur)) {
+                    // 判断是否到达终点
+                    if (q2.contains(neighbor)) {
+                        return step;
+                    }
+                    if (!visited.contains(neighbor) && !deads.contains(neighbor)) {
+                        newQ1.add(neighbor);
+                        visited.add(neighbor);
+                    }
+                }
+            }
+            // newQ1 存储着 q1 的邻居节点
+            q1 = newQ1;
+            // 因为每次 BFS 都是扩散 q1，所以把元素数量少的集合作为 q1
+            if (q1.size() > q2.size()) {
+                Set<String> temp = q1;
+                q1 = q2;
+                q2 = temp;
             }
         }
+        return -1;
     }
+    List<String> getNeighbors(String s) {
+        List<String> neighbors = new ArrayList<>();
+        for (int i = 0; i < 4; i++) {
+            neighbors.add(plusOne(s, i));
+            neighbors.add(minusOne(s, i));
+        }
+        return neighbors;
+    }
+
 }
