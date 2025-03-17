@@ -9,10 +9,9 @@ public class Solution_25 {
         Solution_25 solution19 = new Solution_25();
         int[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
         ListNode listNode = LeetCodeUtils.arrayToList(nums);
-        ListNode res = solution19.reverseKGroup2(listNode, 3);
+        ListNode res = solution19.reverseKGroup2(listNode, 4);
         LeetCodeUtils.printList(res);
     }
-
 
     public ListNode reverseKGroup2(ListNode head, int k) {
         int n = 0;

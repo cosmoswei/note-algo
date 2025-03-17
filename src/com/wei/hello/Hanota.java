@@ -4,8 +4,6 @@ import java.util.List;
 
 public class Hanota {
     public static void main(String[] args) {
-
-
     }
 
     /* 移动一个圆盘 */
