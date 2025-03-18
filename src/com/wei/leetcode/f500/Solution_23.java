@@ -43,5 +43,4 @@ public class Solution_23 {
         }
         return dump.next;
     }
-
 }

@@ -17,7 +17,6 @@ public class Solution_21 {
         // 虚拟头结点
         ListNode dummy = new ListNode(-1), p = dummy;
         ListNode p1 = l1, p2 = l2;
-
         while (p1 != null && p2 != null) {
             // 比较 p1 和 p2 两个指针
             // 将值较小的的节点接到 p 指针
@@ -30,7 +29,6 @@ public class Solution_21 {
             }
             // p 指针不断前进
             p = p.next;
-            LeetCodeUtils.printList(p);
         }
 
         if (p1 != null) {
@@ -40,30 +38,6 @@ public class Solution_21 {
         if (p2 != null) {
             p.next = p2;
         }
-        LeetCodeUtils.printList(dummy);
         return dummy.next;
-    }
-
-    static ListNode mergeTwoLists2(ListNode l1, ListNode l2) {
-        ListNode res = new ListNode(-1);
-        ListNode p = res;
-        ListNode p1 = l1, p2 = l2;
-        while (p1 != null && p2 != null) {
-            if (p1.val > p2.val) {
-                p.next = p2;
-                p2 = p2.next;
-            } else {
-                p.next = p1;
-                p1 = p1.next;
-            }
-            p = p.next;
-        }
-        if (p1 != null) {
-            p.next = p1;
-        }
-        if (p2 != null) {
-            p.next = p2;
-        }
-        return res.next;
     }
 }
