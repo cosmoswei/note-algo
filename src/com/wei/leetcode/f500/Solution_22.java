@@ -11,7 +11,6 @@ public class Solution_22 {
         res.forEach(System.out::println);
     }
 
-
     private int n = 0;
     private char[] path;
     private List<String> res = new ArrayList<>();
@@ -29,7 +28,6 @@ public class Solution_22 {
         return res;
     }
 
-
     void dfs(int i, int open) {
         if (i == n * 2) {
             res.add(new String(path));
@@ -44,6 +42,4 @@ public class Solution_22 {
             dfs(i + 1, open);
         }
     }
-
-
 }
