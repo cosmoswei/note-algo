@@ -5,8 +5,10 @@ public class Solution_416 {
 
 
     public static void main(String[] args) {
-        Integer[] arrays = {3, 9, 20, null, null, 15, 7};
-
+        int[] arrays = {3, 9, 20, 2, 2, 15, 7};
+        Solution_416 solution = new Solution_416();
+        Object res = solution.canPartition(arrays);
+        System.out.println("res = " + res);
     }
 
 

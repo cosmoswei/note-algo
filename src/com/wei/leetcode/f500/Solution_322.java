@@ -26,38 +26,4 @@ public class Solution_322 {
         }
         return dp[amount] == amount + 1 ? -1 : dp[amount];
     }
-
-    int[] memo;
-
-    int coinChange0(int[] coins, int amount) {
-        memo = new int[amount + 1];
-        // 备忘录初始化为一个不会被取到的特殊值，代表还未被计算
-        Arrays.fill(memo, -666);
-        // 题目要求的最终结果是 dp(amount)
-        return dp(coins, amount);
-    }
-
-    int dp(int[] coins, int amount) {
-        if (amount == 0) {
-            return 0;
-        }
-        if (amount < 0) {
-            return -1;
-        }
-        int i = memo[amount];
-
-        if (i != -666) {
-            return i;
-        }
-        int res = Integer.MAX_VALUE;
-        for (int coin : coins) {
-            int dp = dp(coins, amount - coin);
-            if (dp == -1) {
-                continue;
-            }
-            res = Math.min(dp + 1, res);
-        }
-        memo[amount] = (res == Integer.MAX_VALUE) ? -1 : res;
-        return memo[amount];
-    }
 }
