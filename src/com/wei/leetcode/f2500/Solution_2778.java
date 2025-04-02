@@ -1,10 +1,10 @@
 package com.wei.leetcode.f2500;
 
 
-public class Solution_22778 {
+public class Solution_2778 {
 
     public static void main(String[] args) {
-        Solution_22778 solution2085 = new Solution_22778();
+        Solution_2778 solution2085 = new Solution_2778();
         int i = solution2085.percentageLetter("strings1", 's');
         System.out.println("i = " + i);
     }
