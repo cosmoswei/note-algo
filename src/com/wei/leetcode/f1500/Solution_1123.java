@@ -18,7 +18,7 @@ public class Solution_1123 {
         return res;
     }
 
- final    public int dfs(TreeNode root, int dept) {
+    public int dfs(TreeNode root, int dept) {
         if (root == null) {
             maxDepth = Math.max(maxDepth, dept);
             return dept;
