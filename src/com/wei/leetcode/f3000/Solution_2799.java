@@ -7,6 +7,7 @@ import java.util.Map;
 import java.util.Set;
 
 class Solution_2799 {
+
     public static void main(String[] args) {
         Solution_2799 solution = new Solution_2799();
         int res = solution.countCompleteSubarrays(new int[]{5, 5, 5, 5});
