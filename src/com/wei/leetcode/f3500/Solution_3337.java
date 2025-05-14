@@ -7,8 +7,9 @@ class Solution_3337 {
 
     public static void main(String[] args) {
         Solution_3337 solution = new Solution_3337();
-        System.out.println("solution = " + solution.lengthAfterTransformations("new int[]{1, 2, 3, 4, 56, 7, 7, 8})", 2
-                , new ArrayList<>()));
+        int res = solution.lengthAfterTransformations("new int[]{1, 2, 3, 4, 56, 7, 7, 8})", 2
+                , new ArrayList<>());
+        System.out.println("solution = " + res);
     }
 
     private static final int MOD = 1_000_000_007;
